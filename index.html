@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRHLS - Center for Research Help and Learning Support</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Three.js (Required for 3D) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-graduation-cap"></i> CRHLS
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (3D Animation 1: Network Sphere) -->
+    <header id="hero" class="hero">
+        <div id="hero-canvas"></div> <!-- 3D Container -->
+        <div class="container hero-container">
+            <div class="hero-content reveal">
+                <h1>Research Guidance, Data Analysis & Academic Support</h1>
+                <p>CRHLS provides professional guidance, mentorship, and practical learning support for students and professionals to master research skills.</p>
+                <div class="hero-btns">
+                    <a href="#services" class="btn btn-primary">Our Services</a>
+                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section-padding about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span>Who We Are</span>
+                <h2>Simplifying the Research Process</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>Research is an important skill for academic and professional development. However, many individuals face challenges with research methodology, survey design, statistical analysis, software tools, and academic formatting.</p>
+                    <p><strong>CRHLS (Center for Research Help and Learning Support)</strong> aims to simplify this process by offering structured guidance, mentorship, and practical learning support.</p>
+                    <p>Our goal is to support students and professionals in developing strong research and analytical skills. We focus on making research accessible, understandable, and efficient for learners.</p>
+                </div>
+                <div class="about-image reveal">
+                    <img src="https://picsum.photos/seed/crhls_research/600/400.jpg" alt="Research Team Meeting">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION (3D Animation 2: Floating Structure) -->
+    <section id="services" class="section-padding services">
+        <div id="services-canvas"></div> <!-- 3D Container -->
+        <div class="container">
+            <div class="section-header reveal">
+                <span>What We Offer</span>
+                <h2>Comprehensive Research Services</h2>
+            </div>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-compass"></i></div>
+                    <h3>Mentorship & Guidance</h3>
+                    <p>Step-by-step guidance to help individuals understand the research process and conduct their studies more effectively.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-clipboard-question"></i></div>
+                    <h3>Survey & Questionnaire</h3>
+                    <p>Guidance on developing well-structured surveys and questionnaires using appropriate research methods.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                    <h3>Statistics Training</h3>
+                    <p>Training and support to understand statistical concepts and apply them in research data analysis.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3>Software Training</h3>
+                    <p>Practical learning support for SPSS, STATA, R, Python, and Microsoft Excel.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <h3>Analysis & Interpretation</h3>
+                    <p>Guidance in understanding research findings and presenting results in a clear and meaningful way.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-file-pen"></i></div>
+                    <h3>Documentation Support</h3>
+                    <p>Assistance in organizing and formatting research documents according to standard academic practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION (3D Animation 3: Particle Wave) -->
+    <section id="portfolio" class="section-padding portfolio">
+        <div id="portfolio-canvas"></div> <!-- 3D Container -->
+        <div class="container">
+            <div class="section-header reveal">
+                <span>Success Stories</span>
+                <h2>Recent Projects & Courses</h2>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item reveal">
+                    <img src="https://picsum.photos/seed/stats/400/300.jpg" alt="Data Analysis" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Advanced Statistical Analysis</h3>
+                        <p>PhD Research Support</p>
+                    </div>
+                </div>
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item reveal">
+                    <img src="https://picsum.photos/seed/spss/400/300.jpg" alt="SPSS Training" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>SPSS Masterclass</h3>
+                        <p>Corporate Training Workshop</p>
+                    </div>
+                </div>
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item reveal">
+                    <img src="https://picsum.photos/seed/survey/400/300.jpg" alt="Survey Design" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Market Survey Design</h3>
+                        <p>Business Consultancy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+<section class="section-padding testimonials">
+    <div class="container">
+        <div class="section-header reveal">
+            <span>Testimonials</span>
+            <h2>What Our Students Say</h2>
+        </div>
+
+        <div class="testimonial-slider">
+            <div class="testimonial-card reveal">
+                <p>"The mentorship I received at CRHLS transformed my approach to quantitative research. The analysis support was top-notch."</p>
+                <div class="user-info">
+                    <img src="https://picsum.photos/seed/user1/50/50.jpg" alt="User" class="user-avatar">
+                    <div>
+                        <h4>Sarah Jenkins</h4>
+                        <small>PhD Student</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card reveal">
+                <p>"I struggled with SPSS for months. CRHLS training helped me master it in just a few weeks. Highly recommended!"</p>
+                <div class="user-info">
+                    <img src="https://picsum.photos/seed/user2/50/50.jpg" alt="User" class="user-avatar">
+                    <div>
+                        <h4>David Chen</h4>
+                        <small>Market Analyst</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card reveal">
+                <p>"Professional, timely, and extremely knowledgeable. They helped format my thesis perfectly according to university standards."</p>
+                <div class="user-info">
+                    <img src="https://picsum.photos/seed/user3/50/50.jpg" alt="User" class="user-avatar">
+                    <div>
+                        <h4>Emily Roberts</h4>
+                        <small>Graduate Researcher</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card reveal">
+                <p>"The data analysis guidance was clear and practical. I finally understood regression and hypothesis testing properly."</p>
+                <div class="user-info">
+                    <img src="https://picsum.photos/seed/user4/50/50.jpg" alt="User" class="user-avatar">
+                    <div>
+                        <h4>Ahmed Rahman</h4>
+                        <small>Statistics Student</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card reveal">
+                <p>"CRHLS made my research workflow so much easier. Their step-by-step support saved me weeks of work."</p>
+                <div class="user-info">
+                    <img src="https://picsum.photos/seed/user5/50/50.jpg" alt="User" class="user-avatar">
+                    <div>
+                        <h4>Maria Gonzalez</h4>
+                        <small>Master’s Researcher</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section-padding contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span>Get In Touch</span>
+                <h2>Start Your Research Journey</h2>
+            </div>
+            <div class="contact-container reveal">
+                <div class="contact-info">
+                    <h3>Contact Info</h3>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>CRHLS Headquarters<br>Academic District, Innovation City</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>support@crhls.com<br>crhls.research@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>+8801872729667<br> All Day : 24 Hour</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" class="form-control" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" class="form-control" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Service Interested In</label>
+                            <select class="form-control">
+                                <option>Research Mentorship</option>
+                                <option>Survey Design</option>
+                                <option>Data Analysis</option>
+                                <option>Software Training</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea class="form-control" rows="5" placeholder="Tell us about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="color: #fff; margin-bottom: 1rem; display:inline-block;">
+                        <i class="fa-solid fa-graduation-cap" style="color:var(--accent-color)"></i> CRHLS
+                    </a>
+                    <p>Empowering researchers and students with the skills to succeed in the academic and professional world.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Showcase</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">SPSS Training</a></li>
+                        <li><a href="#">Data Analysis</a></li>
+                        <li><a href="#">Mentorship</a></li>
+                        <li><a href="#">Thesis Formatting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 CRHLS - Center for Research Help and Learning Support. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Message sent successfully! We will contact you soon.</div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
