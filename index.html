@@ -13,9 +13,6 @@
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Three.js (Required for 3D) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -42,7 +39,6 @@
 
     <!-- HERO SECTION (3D Animation 1: Network Sphere) -->
     <header id="hero" class="hero">
-        <div id="hero-canvas"></div> <!-- 3D Container -->
         <div class="container hero-container">
             <div class="hero-content reveal">
                 <h1>Research Guidance, Data Analysis & Academic Support</h1>
@@ -75,9 +71,8 @@
         </div>
     </section>
 
-    <!-- SERVICES SECTION (3D Animation 2: Floating Structure) -->
+    <!-- SERVICES SECTION -->
     <section id="services" class="section-padding services">
-        <div id="services-canvas"></div> <!-- 3D Container -->
         <div class="container">
             <div class="section-header reveal">
                 <span>What We Offer</span>
@@ -124,9 +119,8 @@
         </div>
     </section>
 
-    <!-- PORTFOLIO SECTION (3D Animation 3: Particle Wave) -->
+    <!-- PORTFOLIO SECTION -->
     <section id="portfolio" class="section-padding portfolio">
-        <div id="portfolio-canvas"></div> <!-- 3D Container -->
         <div class="container">
             <div class="section-header reveal">
                 <span>Success Stories</span>
@@ -169,62 +163,75 @@
             <h2>What Our Students Say</h2>
         </div>
 
-        <div class="testimonial-slider">
-            <div class="testimonial-card reveal">
-                <p>"The mentorship I received at CRHLS transformed my approach to quantitative research. The analysis support was top-notch."</p>
-                <div class="user-info">
-                    <img src="https://picsum.photos/seed/user1/50/50.jpg" alt="User" class="user-avatar">
-                    <div>
-                        <h4>Sarah Jenkins</h4>
-                        <small>PhD Student</small>
+        <div class="testimonial-row-wrapper reveal">
+            <button class="testimonial-nav prev" id="testimonialPrev" aria-label="Previous">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="testimonial-track" id="testimonialTrack">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p>"The mentorship I received at CRHLS transformed my approach to quantitative research. The analysis support was top-notch."</p>
+                    <div class="star-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="user-info">
+                        <img src="https://picsum.photos/seed/user1/50/50.jpg" alt="Sarah Jenkins" class="user-avatar">
+                        <div><h4>Sarah Jenkins</h4><small>PhD Student</small></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p>"I struggled with SPSS for months. CRHLS training helped me master it in just a few weeks. Highly recommended!"</p>
+                    <div class="star-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="user-info">
+                        <img src="https://picsum.photos/seed/user2/50/50.jpg" alt="David Chen" class="user-avatar">
+                        <div><h4>David Chen</h4><small>Market Analyst</small></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p>"Professional, timely, and extremely knowledgeable. They helped format my thesis perfectly according to university standards."</p>
+                    <div class="star-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="user-info">
+                        <img src="https://picsum.photos/seed/user3/50/50.jpg" alt="Emily Roberts" class="user-avatar">
+                        <div><h4>Emily Roberts</h4><small>Graduate Researcher</small></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p>"The data analysis guidance was clear and practical. I finally understood regression and hypothesis testing properly."</p>
+                    <div class="star-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="user-info">
+                        <img src="https://picsum.photos/seed/user4/50/50.jpg" alt="Ahmed Rahman" class="user-avatar">
+                        <div><h4>Ahmed Rahman</h4><small>Statistics Student</small></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p>"CRHLS made my research workflow so much easier. Their step-by-step support saved me weeks of work."</p>
+                    <div class="star-rating">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="user-info">
+                        <img src="https://picsum.photos/seed/user5/50/50.jpg" alt="Maria Gonzalez" class="user-avatar">
+                        <div><h4>Maria Gonzalez</h4><small>Master's Researcher</small></div>
                     </div>
                 </div>
             </div>
 
-            <div class="testimonial-card reveal">
-                <p>"I struggled with SPSS for months. CRHLS training helped me master it in just a few weeks. Highly recommended!"</p>
-                <div class="user-info">
-                    <img src="https://picsum.photos/seed/user2/50/50.jpg" alt="User" class="user-avatar">
-                    <div>
-                        <h4>David Chen</h4>
-                        <small>Market Analyst</small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card reveal">
-                <p>"Professional, timely, and extremely knowledgeable. They helped format my thesis perfectly according to university standards."</p>
-                <div class="user-info">
-                    <img src="https://picsum.photos/seed/user3/50/50.jpg" alt="User" class="user-avatar">
-                    <div>
-                        <h4>Emily Roberts</h4>
-                        <small>Graduate Researcher</small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card reveal">
-                <p>"The data analysis guidance was clear and practical. I finally understood regression and hypothesis testing properly."</p>
-                <div class="user-info">
-                    <img src="https://picsum.photos/seed/user4/50/50.jpg" alt="User" class="user-avatar">
-                    <div>
-                        <h4>Ahmed Rahman</h4>
-                        <small>Statistics Student</small>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card reveal">
-                <p>"CRHLS made my research workflow so much easier. Their step-by-step support saved me weeks of work."</p>
-                <div class="user-info">
-                    <img src="https://picsum.photos/seed/user5/50/50.jpg" alt="User" class="user-avatar">
-                    <div>
-                        <h4>Maria Gonzalez</h4>
-                        <small>Master’s Researcher</small>
-                    </div>
-                </div>
-            </div>
+            <button class="testimonial-nav next" id="testimonialNext" aria-label="Next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
+
+        <div class="testimonial-dots" id="testimonialDots"></div>
     </div>
 </section>
 
