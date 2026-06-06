@@ -1,0 +1,110 @@
+/* ============================================
+   CRHLS – Animations (Fixed)
+   ============================================ */
+
+/* ===== KEYFRAMES ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Page-hero uses a translateY-only variant — no opacity change,
+   so content is always visible even if animation is disabled */
+@keyframes slideUpHero {
+  from { transform: translateY(18px); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: .7; transform: scale(.85); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ===== HERO ENTRY ANIMATIONS ===== */
+/* These use opacity so they depend on the animation playing.
+   If it doesn't play, opacity stays at 1 (no fill-mode = no pre-state). */
+.hero__badge { animation: fadeInUp .55s ease .05s both; }
+.hero__title { animation: fadeInUp .55s ease .18s both; }
+.hero__sub   { animation: fadeInUp .55s ease .30s both; }
+.hero__cta   { animation: fadeInUp .55s ease .42s both; }
+.hero__stats { animation: fadeInUp .55s ease .54s both; }
+.hero__deco  { animation: fadeIn .8s ease .3s both; }
+
+/* Page hero inner: translateY only — content is ALWAYS fully opaque.
+   If animation is disabled/skipped it just shows normally. */
+.page-hero__inner {
+  animation: slideUpHero .6s ease;
+}
+
+/* ===== SCROLL REVEAL BASE ===== */
+.reveal,
+.reveal-left,
+.reveal-right,
+.reveal-scale {
+  will-change: opacity, transform;
+}
+
+.reveal       { opacity: 0; transform: translateY(28px); transition: opacity .65s ease, transform .65s ease; }
+.reveal-left  { opacity: 0; transform: translateX(-28px); transition: opacity .65s ease, transform .65s ease; }
+.reveal-right { opacity: 0; transform: translateX(28px);  transition: opacity .65s ease, transform .65s ease; }
+.reveal-scale { opacity: 0; transform: scale(.93);         transition: opacity .6s ease, transform .6s ease; }
+
+.reveal.in,
+.reveal-left.in,
+.reveal-right.in,
+.reveal-scale.in {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* ===== STAGGER DELAYS ===== */
+.d1 { transition-delay: .08s !important; }
+.d2 { transition-delay: .16s !important; }
+.d3 { transition-delay: .24s !important; }
+.d4 { transition-delay: .32s !important; }
+.d5 { transition-delay: .40s !important; }
+.d6 { transition-delay: .48s !important; }
+
+/* ===== HOVER EFFECTS ===== */
+.card:hover .card__icon {
+  animation: float 1.8s ease infinite;
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  /* Ensure reveal elements are visible regardless of JS/IO status */
+  .reveal, .reveal-left, .reveal-right, .reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
